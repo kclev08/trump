@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: trump-photo-shop
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 backend/app.py
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
